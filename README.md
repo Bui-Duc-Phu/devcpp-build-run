@@ -12,7 +12,7 @@ Extension VS Code cho Windows: mở file C/C++, bấm **▶** ở góc phải ed
 
 **[Tải extension .vsix](https://github.com/Bui-Duc-Phu/devcpp-build-run/releases/latest/download/devcpp-build-run-0.1.0.vsix)** · **[Xem bản phát hành](https://github.com/Bui-Duc-Phu/devcpp-build-run/releases/latest)**
 
-Chỉ cần **VS Code + Dev-C++ đã cài trên máy**; không cần Node.js khi sử dụng extension. Mã nguồn MIT được đính kèm bản phát hành trong file `devcpp-build-run-0.1.0-source.zip`.
+Chỉ cần **VS Code + Dev-C++ đã cài trên máy**;
 
 ## Cài đặt
 
@@ -23,7 +23,7 @@ Chỉ cần **VS Code + Dev-C++ đã cài trên máy**; không cần Node.js khi
    ![Cài xong nhớ Reload lại VS Code!](https://github.com/user-attachments/assets/41c5a547-57ab-4687-8430-a4ffef706fbb)
 
 4. **Reload lại VS Code:** nhấn **Ctrl+Shift+P** → gõ **Reload Window** → chọn **Developer: Reload Window**.
-5. Mở thư mục chứa code và tin cậy thư mục nếu bạn tin nguồn mã đó.
+5. Mở thư mục chứa code 
 6. Mở file `.c`, `.cpp`, `.cc` hoặc `.cxx`, bấm nút tam giác **Dev-C++: Build & Run** ở góc phải editor. Có thể tìm cùng tên lệnh bằng **Ctrl+Shift+P**.
 
 **Giao diện sau khi cài đặt thành công trong VS Code:**
