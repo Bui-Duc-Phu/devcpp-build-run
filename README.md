@@ -18,9 +18,13 @@ Chỉ cần **VS Code + Dev-C++ đã cài trên máy**; không cần Node.js khi
 
 1. Cài VS Code 1.85 trở lên và Dev-C++ trên máy Windows.
 2. Trong VS Code nhấn **Ctrl+Shift+X**, chọn dấu **…** ở đầu bảng Extensions → **Install from VSIX…**.
-3. Chọn `devcpp-build-run-0.1.0.vsix`. Nếu VS Code yêu cầu, chọn Reload Window.
-4. Mở thư mục chứa code và tin cậy thư mục nếu bạn tin nguồn mã đó.
-5. Mở file `.c`, `.cpp`, `.cc` hoặc `.cxx`, bấm nút tam giác **Dev-C++: Build & Run** ở góc phải editor. Có thể tìm cùng tên lệnh bằng **Ctrl+Shift+P**.
+3. Chọn `devcpp-build-run-0.1.0.vsix` để cài extension.
+
+   ![Cài xong nhớ Reload lại VS Code!](https://github.com/user-attachments/assets/41c5a547-57ab-4687-8430-a4ffef706fbb)
+
+4. **Reload lại VS Code:** nhấn **Ctrl+Shift+P** → gõ **Reload Window** → chọn **Developer: Reload Window**.
+5. Mở thư mục chứa code và tin cậy thư mục nếu bạn tin nguồn mã đó.
+6. Mở file `.c`, `.cpp`, `.cc` hoặc `.cxx`, bấm nút tam giác **Dev-C++: Build & Run** ở góc phải editor. Có thể tìm cùng tên lệnh bằng **Ctrl+Shift+P**.
 
 Bạn cũng có thể cài bằng CLI:
 
