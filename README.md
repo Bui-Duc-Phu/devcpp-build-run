@@ -2,21 +2,21 @@
 
 ## [**Vì sao extension này ra đời?**](#cài-đặt)
 
-[**Bạn muốn code C/C++ trên VS Code, nhưng vừa bắt đầu đã phải lo cài compiler, chỉnh PATH, cấu hình build rồi xử lý đủ kiểu lỗi môi trường? Với những bạn mới học, đôi khi chưa kịp viết chương trình đầu tiên đã thấy nản vì phần cài đặt.**](#cài-đặt)
+[**Bạn muốn code C/C++ trên VS Code, nhưng vừa bắt đầu đã phải lo thiết lập môi trường, chỉnh đường dẫn, cấu hình build rồi xử lý đủ kiểu lỗi? Với những bạn mới học, đôi khi chưa kịp viết chương trình đầu tiên đã thấy nản vì phần cài đặt.**](#cài-đặt)
 
-[**Vì vậy, Dev-C++ Build & Run được sinh ra để giúp bạn bớt loay hoay với những bước đó. Khi máy đã cài Dev-C++ có kèm GCC/G++, bạn chỉ cần cài extension, mở file C/C++ rồi bấm ▶. Extension tự tìm compiler, dùng thư viện chuẩn sẵn có và mở PowerShell riêng để chạy chương trình — để bạn dành thời gian cho việc học và viết code.**](#cài-đặt)
+[**Vì vậy, Dev-C++ Build & Run được sinh ra để giúp bạn bớt loay hoay với những bước đó. Khi máy đã cài Dev-C++, bạn chỉ cần cài extension, mở file C/C++ rồi bấm ▶. Extension tự nhận Dev-C++ và mở PowerShell riêng để chạy chương trình — để bạn dành thời gian cho việc học và viết code.**](#cài-đặt)
 
-[**Điều kiện cần: Windows, VS Code và Dev-C++ đã cài kèm GCC/G++. Chỉ có VS Code thì chưa đủ để biên dịch.**](#cài-đặt)
+[**Điều kiện cần: máy Windows đã cài VS Code và Dev-C++.**](#cài-đặt)
 
-Extension VS Code cho Windows: mở file C/C++, bấm **▶** ở góc phải editor để build bằng GCC/G++ sẵn có trong Dev-C++ và chạy trong **cửa sổ PowerShell riêng**.
+Extension VS Code cho Windows: mở file C/C++, bấm **▶** ở góc phải editor để build bằng Dev-C++ và chạy trong **cửa sổ PowerShell riêng**.
 
 **[Tải extension .vsix](https://github.com/Bui-Duc-Phu/devcpp-build-run/releases/latest/download/devcpp-build-run-0.1.0.vsix)** · **[Xem bản phát hành](https://github.com/Bui-Duc-Phu/devcpp-build-run/releases/latest)**
 
-Chỉ cần **VS Code + Dev-C++ có GCC/G++**; không cần Node.js khi sử dụng extension. Mã nguồn MIT được đính kèm bản phát hành trong file `devcpp-build-run-0.1.0-source.zip`.
+Chỉ cần **VS Code + Dev-C++ đã cài trên máy**; không cần Node.js khi sử dụng extension. Mã nguồn MIT được đính kèm bản phát hành trong file `devcpp-build-run-0.1.0-source.zip`.
 
 ## Cài đặt
 
-1. Cài VS Code 1.85 trở lên và Dev-C++ có GCC/G++ trên Windows.
+1. Cài VS Code 1.85 trở lên và Dev-C++ trên máy Windows.
 2. Trong VS Code nhấn **Ctrl+Shift+X**, chọn dấu **…** ở đầu bảng Extensions → **Install from VSIX…**.
 3. Chọn `devcpp-build-run-0.1.0.vsix`. Nếu VS Code yêu cầu, chọn Reload Window.
 4. Mở thư mục chứa code và tin cậy thư mục nếu bạn tin nguồn mã đó.
@@ -30,17 +30,17 @@ code --install-extension "C:\duong-dan\devcpp-build-run-0.1.0.vsix"
 
 ## Cách chạy
 
-Extension lưu file, tìm compiler Dev-C++, build ra `.devcpp-build\ten-file.cpp.exe` cạnh file nguồn và mở PowerShell riêng để chạy. Bạn nhập dữ liệu trực tiếp trong cửa sổ đó. Chạy xong cửa sổ giữ mở, hiện mã thoát; đóng bằng nút **X**. PowerShell tắt các prompt riêng của nó để tránh chờ nạp PSReadLine; chương trình C/C++ vẫn dùng console để nhập/xuất.
+Extension lưu file, tự nhận Dev-C++, build ra `.devcpp-build\ten-file.cpp.exe` cạnh file nguồn và mở PowerShell riêng để chạy. Bạn nhập dữ liệu trực tiếp trong cửa sổ đó. Chạy xong cửa sổ giữ mở, hiện mã thoát; đóng bằng nút **X**.
 
 PowerShell ngoài VS Code có thể được Windows Terminal tiếp nhận tùy thiết lập terminal mặc định của Windows. Chương trình không chạy trong terminal tích hợp VS Code.
 
 Mở `examples/hello.c` hoặc `examples/hello.cpp`, bấm ▶ rồi nhập `2 3`; kết quả là `Tong: 5`.
 
-## Compiler và thư viện
+## Tự nhận Dev-C++
 
-Tự tìm các bộ Dev-C++ thường gặp: Orwell/Embarcadero, thư mục `MinGW64`, `MinGW32`, `TDM-GCC-64`, các vị trí cài đặt Windows và PATH. Header, thư viện chuẩn và runtime DLL được dùng từ bộ GCC/G++ đã tìm thấy; không cần chép thư viện sang VS Code hoặc sửa PATH hệ thống.
+Extension tự tìm Dev-C++ đã cài trên máy và sử dụng các thành phần sẵn có của Dev-C++. Bạn không cần tự chép thư viện sang VS Code hay chỉnh đường dẫn hệ thống.
 
-Nếu không tìm thấy, extension cho chọn thư mục Dev-C++ hoặc thư mục `bin`. Với bản portable hoặc cài ở ổ khác, có thể đặt **Settings → Devcpp Build Run: Compiler Path**, ví dụ:
+Nếu không tự nhận được, extension sẽ cho bạn chọn thư mục đã cài Dev-C++. Với bản portable hoặc cài ở ổ khác, có thể đặt **Settings → Devcpp Build Run: Compiler Path**, ví dụ:
 
 ```json
 {
@@ -50,7 +50,7 @@ Nếu không tìm thấy, extension cho chọn thư mục Dev-C++ hoặc thư m�
 }
 ```
 
-`compilerPath` cũng nhận đường dẫn `bin`, `gcc.exe` hoặc `g++.exe`; thư mục phải có cả gcc và g++. Nếu cấu hình sai, sửa/xóa đường dẫn này để tự tìm lại.
+Trong `compilerPath`, hãy nhập đường dẫn thư mục cài Dev-C++. Nếu chọn nhầm, sửa hoặc xóa đường dẫn này để extension tự tìm lại.
 
 Mỗi phần tử trong `compilerArgs`/`programArgs` là **một đối số**, không ghép thành một câu lệnh shell. Ví dụ `"compilerArgs": ["-Wall", "-Wextra", "-std=c++11"]`. Thư viện bên thứ ba cần cấu hình `-I`, `-L`, `-l` phù hợp; bản đầu không nhập cấu hình project/thư viện tùy chỉnh từ Dev-C++ và không cấu hình IntelliSense. Chuẩn C/C++ mặc định theo compiler, vì Dev-C++ cũ có thể chưa hỗ trợ chuẩn mới.
 
@@ -58,10 +58,10 @@ Mỗi phần tử trong `compilerArgs`/`programArgs` là **một đối số**, 
 
 - **Biên dịch lỗi:** chọn **Xem lỗi**, hoặc View → Output → Dev-C++ Build & Run để xem chi tiết. Build lỗi sẽ không chạy executable cũ.
 - **Không ghi được .exe:** đóng chương trình cũ đang chạy, kiểm tra quyền ghi thư mục nguồn rồi thử lại.
-- **Thiếu compiler:** kiểm tra bộ Dev-C++ có cài kèm GCC/MinGW hay chưa; bản chỉ có IDE không đủ để build.
+- **Không tìm thấy Dev-C++:** kiểm tra Dev-C++ đã cài trên máy, rồi chọn đúng thư mục cài đặt trong extension.
 - **Không có nút ▶:** mở file đã lưu có đuôi hỗ trợ trên VS Code Windows cục bộ. Kiểm tra extension đã bật và workspace được tin cậy. Nếu toolbar bị chật, lệnh có thể nằm trong menu **…** của editor.
-- **WSL/SSH/container:** mở thư mục trực tiếp trên Windows để dùng compiler Dev-C++ và PowerShell trên máy.
-- **Đường dẫn Unicode với GCC cũ:** extension giữ nguyên đường dẫn, nhưng một số GCC/MinGW cũ có thể không đọc được tên thư mục có dấu. Nếu compiler báo không tìm thấy file, thử thư mục không dấu.
+- **WSL/SSH/container:** mở thư mục trực tiếp trên Windows để dùng Dev-C++ và PowerShell trên máy.
+- **Tên thư mục có dấu:** một số bản Dev-C++ cũ có thể không đọc được tên thư mục có dấu. Nếu báo không tìm thấy file, thử thư mục không dấu.
 
 Bản đầu build **một file nguồn đang mở**. Project nhiều file, `.dev`, debugger và IntelliSense nằm ngoài phạm vi bản này.
 
