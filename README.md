@@ -1,5 +1,13 @@
 # Dev-C++ Build & Run
 
+## [**Vì sao extension này ra đời?**](#cài-đặt)
+
+[**Bạn muốn code C/C++ trên VS Code, nhưng vừa bắt đầu đã phải lo cài compiler, chỉnh PATH, cấu hình build rồi xử lý đủ kiểu lỗi môi trường? Với những bạn mới học, đôi khi chưa kịp viết chương trình đầu tiên đã thấy nản vì phần cài đặt.**](#cài-đặt)
+
+[**Vì vậy, Dev-C++ Build & Run được sinh ra để giúp bạn bớt loay hoay với những bước đó. Khi máy đã cài Dev-C++ có kèm GCC/G++, bạn chỉ cần cài extension, mở file C/C++ rồi bấm ▶. Extension tự tìm compiler, dùng thư viện chuẩn sẵn có và mở PowerShell riêng để chạy chương trình — để bạn dành thời gian cho việc học và viết code.**](#cài-đặt)
+
+[**Điều kiện cần: Windows, VS Code và Dev-C++ đã cài kèm GCC/G++. Chỉ có VS Code thì chưa đủ để biên dịch.**](#cài-đặt)
+
 Extension VS Code cho Windows: mở file C/C++, bấm **▶** ở góc phải editor để build bằng GCC/G++ sẵn có trong Dev-C++ và chạy trong **cửa sổ PowerShell riêng**.
 
 **[Tải extension .vsix](https://github.com/Bui-Duc-Phu/devcpp-build-run/releases/latest/download/devcpp-build-run-0.1.0.vsix)** · **[Xem bản phát hành](https://github.com/Bui-Duc-Phu/devcpp-build-run/releases/latest)**
