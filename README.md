@@ -26,6 +26,10 @@ Chỉ cần **VS Code + Dev-C++ đã cài trên máy**; không cần Node.js khi
 5. Mở thư mục chứa code và tin cậy thư mục nếu bạn tin nguồn mã đó.
 6. Mở file `.c`, `.cpp`, `.cc` hoặc `.cxx`, bấm nút tam giác **Dev-C++: Build & Run** ở góc phải editor. Có thể tìm cùng tên lệnh bằng **Ctrl+Shift+P**.
 
+**Giao diện sau khi cài đặt thành công trong VS Code:**
+
+![Dev-C++ Build & Run đã được cài đặt trong VS Code](https://github.com/user-attachments/assets/7f32b8fb-1168-4e65-bd36-14212e07c602)
+
 Bạn cũng có thể cài bằng CLI:
 
 ```powershell
